@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Luis Arturo García Esquivel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+<body>
+
+    <header>
+        <h1>Luis Arturo García Esquivel</h1>
+        <p>Ingeniero Biomédico</p>
+    </header>
+
+    <main>
+        <details>
+        <summary>About me</summary>
+    <div class="content">
+        <p>Results-driven Engineer with expertise in Clinical Engineering and Medical Device Vigilance.
+         Proven track record in maintaining high-stakes medical equipment and navigating complex regulatory frameworks. 
+         Experienced in Research & Development (R&D) and Quality Assurance, with a focus on clinical trials. 
+         My collaborative approach with cross-functional teams underscore my readiness to contribute to innovative advancements in any team.</p>
+        </div>
+        </details>
+    
+        <details>
+        <summary>Job Experience</summary>
+    <div class="content">
+        <article>
+        <h3>Adjunct Professor of Introduction to Programming and Electronics</h3>
+        <h4>Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM) | Mexico City </h4>
+        <h4>Aug, 2025 to present </h4>
+        <p>Adjunct professor delivering the "Introduction to Electric Circuits and Programming" course within the Tec21 Educational Model. 
+        Designed hands-on modules and lab activities using Challenge-Based Learning (CBL), 
+        guiding student teams to design, prototype, and test functional electronic systems while integrating computational problem-solving. 
+        Mentored students, assessed learning outcomes, and collaborated with faculty to refine curriculum and evaluation methods.</p>
+        </article>
+        <hr>
+        <article>
+        <h3>QA Software Engineer</h3>
+        <h4>Keywords Studios | Ciudad de México </h4>
+        <h4>Oct, 2023 to Oct, 2025 </h4>
+        <p>Develop and execute manual and automated test plans and scripts (Python, Selenium) to validate software against client requirements and product specifications.</p><p>Manage defect lifecycle in Jira logging, triaging, and verifying fixes, while producing clear test reports and metrics using Excel and Office tools.
+           Coordinate with developers, production teams, and clients to prioritize issues and ensure aligned releases, maintaining professional English communication and client-facing documentation.</p>
+        </article>
+        <hr>
+        <article>
+        <h3>Mobile App Developer</h3>
+        <h4>Siemens Healthineers | Ciudad de México </h4>
+        <h4>Feb, 2023 to Jun, 2023 </h4>
+        <p>Led development of a mobile application prototype for emergency response training: 
+        formalized technical requirements, coordinated a multidisciplinary team, and delivered a functional, 
+        professional-grade prototype approved by the Industrial Safety Manager. 
+        Translated strategic proposals into validated technical deliverables under tight deadlines and aligned stakeholder expectations.</p>
+        </article>
+        <hr>
+        <article>
+        <h3>Clinical Engineer</h3>
+        <h4>Hospital Médica Sur | Ciudad de México </h4>
+        <h4>Sept, 2019 to Dec, 2020 </h4>
+        <p>Managed lifecycle, preventive and corrective maintenance, acceptance testing, and calibration of critical medical equipment across hospital departments. 
+        Maintained regulatory compliance and submitted technovigilance reports; 
+        provided technical support to clinical teams and led initiatives to improve equipment reliability and patient safety. 
+        Implemented maintenance tracking and documentation practices to ensure traceability andc audit readiness.</p>
+        </article>
+    </div>
+        </details>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Hecho con ingenio</p>
+    </footer>
+
+</body>
+
+<script>
+document.querySelectorAll("details").forEach(detail => {
+  const summary = detail.querySelector("summary");
+  const content = detail.querySelector(".content");
+
+  summary.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    if (!detail.hasAttribute("open")) {
+      // ABRIR
+      detail.setAttribute("open", "");
+      content.style.maxHeight = content.scrollHeight + "px";
+    } else {
+      // CERRAR
+      content.style.maxHeight = content.scrollHeight + "px";
+
+      requestAnimationFrame(() => {
+        content.style.maxHeight = "0px";
+      });
+
+      setTimeout(() => {
+        detail.removeAttribute("open");
+      }, 400); // debe coincidir con transition
+    }
+  });
+});
+</script>
+
+</html>

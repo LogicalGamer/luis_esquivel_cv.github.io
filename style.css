@@ -1,0 +1,67 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #ffffff; /* Texto general en Blanco */
+    max-width: 900px;
+    margin: 0; /* Pegado a la izquierda */
+    padding: 30px;
+    background-color: #000000; /* Fondo Negro */
+}
+
+header {
+    border-bottom: 4px solid #ffcc00; /* Línea Amarilla debajo del header */
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+header h1 {
+    color: #ffcc00; /* Nombre en Amarillo */
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-top: 5px;
+}
+
+/* Estilo de los acordeones (secciones ocultas) */
+details {
+    background: #1a1a1a; /* Negro grisáceo para resaltar del fondo */
+    margin-bottom: 15px;
+    padding: 15px 25px;
+    border-radius: 5px;
+    border-left: 5px solid #ffcc00; /* Borde lateral Amarillo */
+    transition: background 0.3s ease;
+}
+
+details[open] {
+    background: #222222;
+}
+
+summary {
+    font-size: 1.3rem;
+    font-weight: bold;
+    cursor: pointer;
+    list-style: none;
+    color: #ffcc00; /* Títulos de secciones en Amarillo */
+    outline: none;
+}
+
+summary::-webkit-details-marker {
+    display: none; /* Quita la flecha fea en Safari */
+}
+
+summary::before {
+    content: "+ "; /* Símbolo simple */
+    color: #ffffff;
+}
+
+
+details .content {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease;
+}
